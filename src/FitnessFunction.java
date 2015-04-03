@@ -50,7 +50,7 @@ class FitnessFunction{
 		System.out.println("debugPrint is extension that is used only lab scheduling");
 	}
 	public int[] getHisto(Chromo X){
-		System.out.println("getHisto is extension that is used only lab scheduling");
+		System.out.println("getHisto is extension that is used only lab scheduling and prisoner dilema");
 		return null;
 	}
 

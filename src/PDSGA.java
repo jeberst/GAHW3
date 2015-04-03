@@ -1,30 +1,43 @@
-/******************************************************************************
-*  A Teaching GA					  Developed by Hal Stringer & Annie Wu, UCF
-*  Version 2, January 18, 2004
-*******************************************************************************/
-
 import java.io.*;
 import java.util.*;
 import java.text.*;
 
-public class OneMax extends FitnessFunction{
+public class PDSGA extends FitnessFunction{
+	
+/*******************************************************************************
+*                            PRIVATE CLASSESS                                  *
+*******************************************************************************/
+
 
 /*******************************************************************************
 *                            INSTANCE VARIABLES                                *
 *******************************************************************************/
-
+	Scanner parmInput; 
 
 /*******************************************************************************
 *                            STATIC VARIABLES                                  *
 *******************************************************************************/
-
+	private static int numGames;
+	private static int numOpponents;
+	Strategy [] testStrategies;
 
 /*******************************************************************************
 *                              CONSTRUCTORS                                    *
 *******************************************************************************/
 
-	public OneMax(){
-		name = "OneMax Problem";
+	public PDSGA(){
+		numGames = 64;
+		testStrategies = new Strategy[4];
+		testStrategies[0] = new StrategyTitForTat();
+		testStrategies[1] = new StrategyAlwaysCooperate();
+		testStrategies[2] = new StrategyAlwaysDefect();
+		testStrategies[3] = new StrategyRandom();
+		numOpponents = testStrategies.length; 
+		name = "Prisoners Dilema with Simple Genetic Algorithm Problem";
+		//this is only case when this player always defects, and other always cooperates
+		optimalVal = 7 * numGames * numOpponents;
+
+
 	}
 
 /*******************************************************************************
@@ -36,9 +49,19 @@ public class OneMax extends FitnessFunction{
 	public void doRawFitness(Chromo X){
 
 		X.rawFitness = 0;
-		for (int z=0; z<Parameters.numGenes * Parameters.geneSize; z++){
-			if (X.chromo.charAt(z) == '1') X.rawFitness += 1;
+		int fitness = 0;
+		StrategyGA strat = new StrategyGA(X.chromo);
+		for (int i = 0; i < testStrategies.length; i++){
+			IteratedPD ipd = new IteratedPD(strat, testStrategies[i]);
+			ipd.runSteps(numGames);
+			fitness += ipd.player1Score();
+			//System.out.println("GA Score for i = " + i + ": " + ipd.player1Score() + ", Player 2:" + ipd.player2Score());
 		}
+		
+
+		X.rawFitness = fitness;
+		
+		
 	}
 
 //  PRINT OUT AN INDIVIDUAL GENE TO THE SUMMARY FILE *********************************
@@ -57,10 +80,30 @@ public class OneMax extends FitnessFunction{
 		output.write("\n\n");
 		return;
 	}
+	
+	public int [] getHisto(Chromo X){
+		int[] scoreArray = new int[testStrategies.length + 1];
+		StrategyGA strat = new StrategyGA(X.chromo);
+		for (int i = 0; i < testStrategies.length; i++){
+			IteratedPD ipd = new IteratedPD(strat, testStrategies[i]);
+			ipd.runSteps(numGames);
+			scoreArray[i+1] = ipd.player1Score();
+		}
+		return scoreArray;
+
+		
+	}
 
 /*******************************************************************************
 *                             STATIC METHODS                                   *
 *******************************************************************************/
+    private static double Power(double base, int power){
+        double answer = 1.0;
+        for (int i = 0; i < power; i++){
+            answer *= base;
+        }
+        return answer;
+    }
 
-}   // End of OneMax.java ******************************************************
+}   // End of labScheduling.java ******************************************************
 
