@@ -157,7 +157,7 @@ public class Search {
 			//the 2nd graph
 			String gOut2 = String.format("reportData\\%d_histo.csv", R);
 			BufferedWriter gOutWrite2 = new BufferedWriter(new FileWriter(gOut2));
-			gOutWrite2.write("first,second,third,forth\n");
+			gOutWrite2.write("TFT,ALLC,ALLD,Random,TF2T,PAVLOV\n");
 
 			bestOfRunChromo.rawFitness = defaultBest;
 			System.out.println();
@@ -426,7 +426,7 @@ public class Search {
 		//print out avg pie chart stuff and close output
 		String gOut3 = String.format("reportData\\pie_chart.csv", R);
 		BufferedWriter gOutWrite3 = new BufferedWriter(new FileWriter(gOut3));
-		gOutWrite3.write("first,second,third,forth\n");
+		gOutWrite3.write("TFT,ALLC,ALLD,Random,TF2T,PAVLOV\n");
 		double [] histoAvg = new double [allHisto[1].length];
 		for (int i = 1; i <=Parameters.numRuns; i++){
 			//there's no run 0
@@ -463,7 +463,7 @@ public class Search {
 		Hwrite.left("B", 8, summaryOutput);
 
 		problem.doPrintGenes(bestOverAllChromo, summaryOutput);
-		
+		outputPolicy(bestOverAllChromo);
 
 		//	Output Fitness Statistics matrix
 		summaryOutput.write("Gen            AvgFit              BestFit             StdAvgFit           StdBestFit          numOptimal\n");
@@ -516,6 +516,18 @@ public class Search {
 				count++;
 		}
 		return count;
+	}
+	
+	private static void outputPolicy(Chromo X) throws IOException{
+		String str = X.chromo;
+		FileWriter policyWriter = new FileWriter("GAPolicy.txt");
+		StringBuilder bleh = new StringBuilder();
+		for(int i = 0; i < str.length(); i++){
+			bleh.append(str.charAt(i));
+			//bleh.append(" ");
+		}
+		policyWriter.write(bleh.toString());
+		policyWriter.close();
 	}
 
 }   // End of Search.Java ******************************************************

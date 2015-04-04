@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.*;
-import java.text.*;
 
 public class PDSGA extends FitnessFunction{
 	
@@ -27,11 +26,13 @@ public class PDSGA extends FitnessFunction{
 
 	public PDSGA(){
 		numGames = 64;
-		testStrategies = new Strategy[4];
+		testStrategies = new Strategy[6];
 		testStrategies[0] = new StrategyTitForTat();
 		testStrategies[1] = new StrategyAlwaysCooperate();
 		testStrategies[2] = new StrategyAlwaysDefect();
 		testStrategies[3] = new StrategyRandom();
+		testStrategies[4] = new StrategyTitForTwoTats();
+		testStrategies[5] = new StrategyPavlov();
 		numOpponents = testStrategies.length; 
 		name = "Prisoners Dilema with Simple Genetic Algorithm Problem";
 		//this is only case when this player always defects, and other always cooperates
@@ -97,13 +98,6 @@ public class PDSGA extends FitnessFunction{
 /*******************************************************************************
 *                             STATIC METHODS                                   *
 *******************************************************************************/
-    private static double Power(double base, int power){
-        double answer = 1.0;
-        for (int i = 0; i < power; i++){
-            answer *= base;
-        }
-        return answer;
-    }
 
 }   // End of labScheduling.java ******************************************************
 

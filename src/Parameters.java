@@ -4,8 +4,6 @@
 *******************************************************************************/
 
 import java.io.*;
-import java.util.*;
-import java.text.*;
 
 public class Parameters
 {
@@ -45,7 +43,6 @@ public class Parameters
 
 	public Parameters(String parmfilename) throws java.io.IOException{
 
-		String readLine;
 		BufferedReader parmInput = new BufferedReader(new FileReader (parmfilename));
 
 		expID = parmInput.readLine().substring(30);

@@ -1,4 +1,3 @@
-
 public class StrategyGA extends Strategy {
 
 	/**
@@ -9,6 +8,7 @@ public class StrategyGA extends Strategy {
 	int [] moveHistory;
 	int [] moveChoice;
 
+	//This constructor is for the GA program that tries to find optimal chomosome
 	public StrategyGA(String chromosome) {
 		name = "GA Strategy";
 		moveHistory = new int[6];
@@ -29,7 +29,26 @@ public class StrategyGA extends Strategy {
 		}
 		System.out.println();
 		*/
-	} /* StrategyTitForTat */
+	} /* StrategyGA */
+	
+	//this constructor is for Dr. Wu's ipd code to call and run
+	//REQUIREMENT: file called GAPolicy.txt is already in source folder
+	public StrategyGA(){
+		name = "GA Strategy";
+		moveHistory = new int[6];
+		moveChoice = new int[64];
+		for(int i = 0; i < moveHistory.length; i++){
+			moveHistory[i]= 1;
+		}
+		String input = "0010001001010101000001010110000000001110000001100010011110101000";
+		for(int i = 0; i < moveChoice.length; i++){
+			if (input.charAt(i) == '1')
+				moveChoice[i] = 1;
+			else
+				moveChoice[i] = 0;
+			
+		}
+	}
 
 	public int nextMove() {
 		//printMoveHistory();
