@@ -39,8 +39,21 @@ public class StrategyGA extends Strategy {
 		moveChoice = new int[64];
 		for(int i = 0; i < moveHistory.length; i++){
 			moveHistory[i]= 1;
-		}
-		String input = "0010001001010101000001010110000000001110000001100010011110101000";
+		}	
+		//string from only testing against predefined strategies and better parameters
+		//NOTE: This one tries to win, even if it's score is a bit lower. 
+		//VS titfortat: win 436 - 430
+		//0010000001010011001100000011000000001011000001100100011010100100
+		
+		//string from just going against other GAs
+		//NOTE: this is bad, it can't beat StrategyRandom
+		//0001011101101111100100101000010011100111011011110111111100011101
+		
+		//string from hybrid method:
+		//NOTE: this one cooperates to maximize score. Also wrecks StrategyRandom
+		//VS titfortat: tie 500 - 500
+		//0010010001000001000000000000010000001011010011100100001100001101
+		String input = "0010010001000001000000000000010000001011010011100100001100001101";
 		for(int i = 0; i < moveChoice.length; i++){
 			if (input.charAt(i) == '1')
 				moveChoice[i] = 1;

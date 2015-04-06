@@ -35,8 +35,8 @@ class FitnessFunction{
 
 //  COMPUTE A CHROMOSOME'S RAW FITNESS *************************************
 
-	public void doRawFitness(Chromo X){
-		System.out.println("Executing FF Raw Fitness");
+	public void doRawFitness(Chromo X, Chromo [] allChromo){
+		System.out.println("Executing FF Raw Fitness. I added Chromo [] allChromo as a second paraameter just for prisonerGA");
 	}
 
 //  PRINT OUT AN INDIVIDUAL GENE TO THE SUMMARY FILE *********************************

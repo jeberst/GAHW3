@@ -17,7 +17,6 @@ public class PDSGA extends FitnessFunction{
 *                            STATIC VARIABLES                                  *
 *******************************************************************************/
 	private static int numGames;
-	private static int numOpponents;
 	Strategy [] testStrategies;
 
 /*******************************************************************************
@@ -33,10 +32,10 @@ public class PDSGA extends FitnessFunction{
 		testStrategies[3] = new StrategyRandom();
 		testStrategies[4] = new StrategyTitForTwoTats();
 		testStrategies[5] = new StrategyPavlov();
-		numOpponents = testStrategies.length; 
 		name = "Prisoners Dilema with Simple Genetic Algorithm Problem";
-		//this is only case when this player always defects, and other always cooperates
-		optimalVal = 7 * numGames * numOpponents;
+		//Optimum value achieved when opponent always cooperates, and you always defect
+		//reward = 7 for temptation. Multiply that by the number of games. 
+		optimalVal = 7 * numGames;
 
 
 	}
@@ -46,21 +45,36 @@ public class PDSGA extends FitnessFunction{
 *******************************************************************************/
 
 //  COMPUTE A CHROMOSOME'S RAW FITNESS *************************************
-
-	public void doRawFitness(Chromo X){
-
-		X.rawFitness = 0;
-		int fitness = 0;
+	
+	public void doRawFitness(Chromo X, Chromo [] allChromo){
 		StrategyGA strat = new StrategyGA(X.chromo);
+		X.rawFitness = 0;
+		
+		/*
+		double fitnessPart1 = 0.0;
 		for (int i = 0; i < testStrategies.length; i++){
 			IteratedPD ipd = new IteratedPD(strat, testStrategies[i]);
 			ipd.runSteps(numGames);
-			fitness += ipd.player1Score();
+			fitnessPart1 += ipd.player1Score();
 			//System.out.println("GA Score for i = " + i + ": " + ipd.player1Score() + ", Player 2:" + ipd.player2Score());
 		}
+		fitnessPart1 /= testStrategies.length;
+		//X.rawFitness = fitnessPart1;
+		*/
 		
-
-		X.rawFitness = fitness;
+		double fitnessPart2 = 0.0;
+		for (int i = 0; i < allChromo.length; i++){
+			StrategyGA otherStrat = new StrategyGA(allChromo[i].chromo);
+			IteratedPD ipd = new IteratedPD(strat, otherStrat);
+			ipd.runSteps(numGames);
+			fitnessPart2 += ipd.player1Score();
+			//System.out.println("GA Score for i = " + i + ": " + ipd.player1Score() + ", Player 2:" + ipd.player2Score());
+		}
+		fitnessPart2 /= allChromo.length;
+		X.rawFitness = fitnessPart2;
+		
+		//X.rawFitness = (fitnessPart1 + fitnessPart2)/2;
+		
 		
 		
 	}

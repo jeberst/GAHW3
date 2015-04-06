@@ -184,7 +184,7 @@ public class Search {
 					member[i].sclFitness = 0;
 					member[i].proFitness = 0;
 
-					problem.doRawFitness(member[i]);
+					problem.doRawFitness(member[i], member);
 					
 					//check to see if an optimum was found this generation:
 					if (member[i].rawFitness == problem.optimalVal){

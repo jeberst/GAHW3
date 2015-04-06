@@ -20,9 +20,15 @@ public class StrategyPavlov extends Strategy
    public int nextMove()
       {
 	   if (opponentLastMove == myLastMove)
-		   return 1;
+		   if (myLastMove == 1)
+			   return 1;
+		   else
+			   return 0;
 	   else
-		   return 0;
+		   if (myLastMove == 0)
+			   return 1;
+		   else 
+			   return 0;
       }  /* nextMove */
 
    }  /* class StrategyTitForTat */
