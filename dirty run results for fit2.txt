@@ -1,0 +1,395 @@
+Experiment ID                :PrisonerDilema
+Problem Type                 :PD
+Data Input File Name         :NA
+Number of Runs               :5
+Generations per Run          :150
+Population Size              :150
+Selection Method (1)         :1
+Fitness Scaling Type (2)     :2
+Crossover Type (3)           :3
+Crossover Rate (4)           :1.0
+Mutation Type (5)            :1
+Mutation Rate (6)            :0.01    <- changed parameter
+Random Number Seed           :75982
+Number of Genes/Points (7)   :64
+Size of Genes (18)           :1
+
+0000001110111100011100010101000101000011000000110100000011111011
+
+ Player 1 is GA Strategy, Player 2 is Random
+ Player 1 score = 414
+ Player 2 score = 366
+ Player 1 is GA Strategy, Player 2 is Tit for Two Tats
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Pavlov
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Tit for Tat
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Always defect
+ Player 1 score = 294
+ Player 2 score = 312
+ Player 1 is GA Strategy, Player 2 is Always cooperate
+ Player 1 score = 500
+ Player 2 score = 500
+TotalScore for player 1:  451.33
+
+
+Experiment ID                :PrisonerDilema
+Problem Type                 :PD
+Data Input File Name         :NA
+Number of Runs               :5
+Generations per Run          :150
+Population Size              :150
+Selection Method (1)         :1
+Fitness Scaling Type (2)     :2
+Crossover Type (3)           :3
+Crossover Rate (4)           :1.0
+Mutation Type (5)            :1
+Mutation Rate (6)            :0.005   <- changed parameter
+Random Number Seed           :75982
+Number of Genes/Points (7)   :64
+Size of Genes (18)           :1
+
+1000011111111100100000110000000001000000000010100111100010100111
+
+Player 1 is GA Strategy, Player 2 is Random
+ Player 1 score = 420
+ Player 2 score = 366
+ Player 1 is GA Strategy, Player 2 is Tit for Two Tats
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Pavlov
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Tit for Tat
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Always defect
+ Player 1 score = 214
+ Player 2 score = 472
+ Player 1 is GA Strategy, Player 2 is Always cooperate
+ Player 1 score = 500
+ Player 2 score = 500
+TotalScore for player 1:  439.00
+
+
+Experiment ID                :PrisonerDilema
+Problem Type                 :PD
+Data Input File Name         :NA
+Number of Runs               :5
+Generations per Run          :150
+Population Size              :150
+Selection Method (1)         :1
+Fitness Scaling Type (2)     :2
+Crossover Type (3)           :3       <- uniform Xover did best
+Crossover Rate (4)           :1.0    <- changed parameter  (BEATEN by .8)
+Mutation Type (5)            :1
+Mutation Rate (6)            :0.001   <- changed parameter (DID BEST)
+Random Number Seed           :75982
+Number of Genes/Points (7)   :64
+Size of Genes (18)           :1
+
+0110000000000101000000001011001010010100000011101101101000101111
+
+ Player 1 is GA Strategy, Player 2 is Random
+ Player 1 score = 482
+ Player 2 score = 290
+ Player 1 is GA Strategy, Player 2 is Tit for Two Tats
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Pavlov
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Tit for Tat
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Always defect
+ Player 1 score = 232
+ Player 2 score = 436
+ Player 1 is GA Strategy, Player 2 is Always cooperate
+ Player 1 score = 500
+ Player 2 score = 500
+TotalScore for player 1:  452.33
+
+
+Experiment ID                :PrisonerDilema
+Problem Type                 :PD
+Data Input File Name         :NA
+Number of Runs               :5
+Generations per Run          :150
+Population Size              :150
+Selection Method (1)         :1
+Fitness Scaling Type (2)     :2
+Crossover Type (3)           :3
+Crossover Rate (4)           :0.9   <- changed parameter
+Mutation Type (5)            :1
+Mutation Rate (6)            :0.001
+Random Number Seed           :75982
+Number of Genes/Points (7)   :64
+Size of Genes (18)           :1
+
+1010111010010011100100001001001000001100000101001110001001011011
+
+ Player 1 is GA Strategy, Player 2 is Random
+ Player 1 score = 380
+ Player 2 score = 386
+ Player 1 is GA Strategy, Player 2 is Tit for Two Tats
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Pavlov
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Tit for Tat
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Always defect
+ Player 1 score = 200
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Always cooperate
+ Player 1 score = 500
+ Player 2 score = 500
+TotalScore for player 1:  430.00
+
+
+
+
+Experiment ID                :PrisonerDilema
+Problem Type                 :PD
+Data Input File Name         :NA
+Number of Runs               :5
+Generations per Run          :150
+Population Size              :150
+Selection Method (1)         :1
+Fitness Scaling Type (2)     :2
+Crossover Type (3)           :3
+Crossover Rate (4)           :0.8  <- changed parameter (DID BEST)
+Mutation Type (5)            :1
+Mutation Rate (6)            :0.001
+Random Number Seed           :75982
+Number of Genes/Points (7)   :64
+Size of Genes (18)           :1
+
+0000000000000110000001110100110000000110000001010000100100010000
+
+ Player 1 is GA Strategy, Player 2 is Random
+ Player 1 score = 504
+ Player 2 score = 198
+ Player 1 is GA Strategy, Player 2 is Tit for Two Tats
+ Player 1 score = 568
+ Player 2 score = 364
+ Player 1 is GA Strategy, Player 2 is Pavlov
+ Player 1 score = 420
+ Player 2 score = 420
+ Player 1 is GA Strategy, Player 2 is Tit for Tat
+ Player 1 score = 420
+ Player 2 score = 420
+ Player 1 is GA Strategy, Player 2 is Always defect
+ Player 1 score = 300
+ Player 2 score = 300
+ Player 1 is GA Strategy, Player 2 is Always cooperate
+ Player 1 score = 568
+ Player 2 score = 364
+TotalScore for player 1:  463.33
+
+
+
+
+Experiment ID                :PrisonerDilema
+Problem Type                 :PD
+Data Input File Name         :NA
+Number of Runs               :5
+Generations per Run          :150
+Population Size              :150
+Selection Method (1)         :1
+Fitness Scaling Type (2)     :2
+Crossover Type (3)           :3
+Crossover Rate (4)           :0.7   <- changed parameter
+Mutation Type (5)            :1
+Mutation Rate (6)            :0.001
+Random Number Seed           :75982
+Number of Genes/Points (7)   :64
+Size of Genes (18)           :1
+
+0100101110110010010110011110001100000000000110101111001000000101
+
+Player 1 is GA Strategy, Player 2 is Random
+ Player 1 score = 450
+ Player 2 score = 336
+ Player 1 is GA Strategy, Player 2 is Tit for Two Tats
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Pavlov
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Tit for Tat
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Always defect
+ Player 1 score = 184
+ Player 2 score = 532
+ Player 1 is GA Strategy, Player 2 is Always cooperate
+ Player 1 score = 500
+ Player 2 score = 500
+TotalScore for player 1:  439.00
+
+
+Experiment ID                :PrisonerDilema
+Problem Type                 :PD
+Data Input File Name         :NA
+Number of Runs               :5
+Generations per Run          :150
+Population Size              :150
+Selection Method (1)         :1
+Fitness Scaling Type (2)     :2
+Crossover Type (3)           :3
+Crossover Rate (4)           :0.6   <- changed parameter
+Mutation Type (5)            :1
+Mutation Rate (6)            :0.001
+Random Number Seed           :75982
+Number of Genes/Points (7)   :64
+Size of Genes (18)           :1
+
+1001000000010010000110001000000000011000000100101010001000101111
+
+Player 1 is GA Strategy, Player 2 is Random
+ Player 1 score = 506
+ Player 2 score = 224
+ Player 1 is GA Strategy, Player 2 is Tit for Two Tats
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Pavlov
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Tit for Tat
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Always defect
+ Player 1 score = 250
+ Player 2 score = 400
+ Player 1 is GA Strategy, Player 2 is Always cooperate
+ Player 1 score = 500
+ Player 2 score = 500
+TotalScore for player 1:  459.33
+
+
+
+Experiment ID                :PrisonerDilema
+Problem Type                 :PD
+Data Input File Name         :NA
+Number of Runs               :5
+Generations per Run          :150
+Population Size              :150
+Selection Method (1)         :1
+Fitness Scaling Type (2)     :2
+Crossover Type (3)           :3
+Crossover Rate (4)           :0.5  <- changed parameter
+Mutation Type (5)            :1
+Mutation Rate (6)            :0.001
+Random Number Seed           :75982
+Number of Genes/Points (7)   :64
+Size of Genes (18)           :1
+
+0000000110110010001100000010010000001001000100000101010011000111
+
+ Max steps = 100
+ Player 1 is GA Strategy, Player 2 is Random
+ Player 1 score = 438
+ Player 2 score = 318
+ Player 1 is GA Strategy, Player 2 is Tit for Two Tats
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Pavlov
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Tit for Tat
+ Player 1 score = 500
+ Player 2 score = 500
+ Player 1 is GA Strategy, Player 2 is Always defect
+ Player 1 score = 296
+ Player 2 score = 308
+ Player 1 is GA Strategy, Player 2 is Always cooperate
+ Player 1 score = 500
+ Player 2 score = 500
+TotalScore for player 1:  455.67
+
+
+
+Experiment ID                :PrisonerDilema
+Problem Type                 :PD
+Data Input File Name         :NA
+Number of Runs               :5
+Generations per Run          :150
+Population Size              :150
+Selection Method (1)         :1
+Fitness Scaling Type (2)     :2
+Crossover Type (3)           :3
+Crossover Rate (4)           :0.4  <- changed parameter
+Mutation Type (5)            :1
+Mutation Rate (6)            :0.001
+Random Number Seed           :75982
+Number of Genes/Points (7)   :64
+Size of Genes (18)           :1
+
+0001011100000111000100111000000110110101010001110001111010100000
+
+ Player 1 is GA Strategy, Player 2 is Random
+ Player 1 score = 418
+ Player 2 score = 394
+ Player 1 is GA Strategy, Player 2 is Tit for Two Tats
+ Player 1 score = 600
+ Player 2 score = 300
+ Player 1 is GA Strategy, Player 2 is Pavlov
+ Player 1 score = 306
+ Player 2 score = 300
+ Player 1 is GA Strategy, Player 2 is Tit for Tat
+ Player 1 score = 306
+ Player 2 score = 300
+ Player 1 is GA Strategy, Player 2 is Always defect
+ Player 1 score = 294
+ Player 2 score = 312
+ Player 1 is GA Strategy, Player 2 is Always cooperate
+ Player 1 score = 600
+ Player 2 score = 300
+TotalScore for player 1:  420.67
+
+
+Experiment ID                :PrisonerDilema
+Problem Type                 :PD
+Data Input File Name         :NA
+Number of Runs               :5
+Generations per Run          :150
+Population Size              :150
+Selection Method (1)         :1
+Fitness Scaling Type (2)     :2 
+Crossover Type (3)           :1      <- changed parameter (beaten)
+Crossover Rate (4)           :1.0
+Mutation Type (5)            :1
+Mutation Rate (6)            :0.001
+Random Number Seed           :75982
+Number of Genes/Points (7)   :64
+Size of Genes (18)           :1
+
+0110010011010000001000110100001100010001001000000000010010010000
+
+Player 1 is GA Strategy, Player 2 is Random
+ Player 1 score = 428
+ Player 2 score = 338
+ Player 1 is GA Strategy, Player 2 is Tit for Two Tats
+ Player 1 score = 420
+ Player 2 score = 300
+ Player 1 is GA Strategy, Player 2 is Pavlov
+ Player 1 score = 400
+ Player 2 score = 400
+ Player 1 is GA Strategy, Player 2 is Tit for Tat
+ Player 1 score = 400
+ Player 2 score = 400
+ Player 1 is GA Strategy, Player 2 is Always defect
+ Player 1 score = 300
+ Player 2 score = 300
+ Player 1 is GA Strategy, Player 2 is Always cooperate
+ Player 1 score = 650
+ Player 2 score = 200
+TotalScore for player 1:  433.00

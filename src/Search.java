@@ -489,6 +489,10 @@ public class Search {
 		Hwrite.left("B", 8, summaryOutput);
 
 		problem.doPrintGenes(bestOverAllChromo, summaryOutput);
+		//type outputPolicy (bestOfAllLastGenChromo); if you want to have the best 
+		//	chomosome of the last generation to be printed to GAPolicy.txt
+		//type outputPolicy(bestOverAllChromo); if you want to have the chomosome
+		//	with the highest overall fitness printed to GAPolicy.txt
 		outputPolicy(bestOverAllChromo);
 
 		//	Output Fitness Statistics matrix
