@@ -30,6 +30,14 @@ public class Search {
 	public static Chromo bestOverAllChromo;
 	public static int bestOverAllR;
 	public static int bestOverAllG;
+	
+	//this chomosome is just for the Prisoners dilema
+	//belief: 2nd part of fitness function will become more difficult as rest of 
+	//population gets better. therefore, better solutions found at the end will
+	//have a lower score than worse solutions in the beginning
+	//Therefore, return the best chromosome found at the last generation. 
+	public static Chromo [] bestOfLastGenChromoArray;
+	public static Chromo bestOfAllLastGenChromo;
 
 	public static double sumRawFitness;
 	public static double sumRawFitness2;	// sum of squares of fitness
@@ -147,6 +155,12 @@ public class Search {
 		if(!(new File("reportData").exists())){
 			new File("reportData").mkdir();
 		}
+		
+		bestOfLastGenChromoArray = new Chromo[Parameters.numRuns + 1];
+		for (int i = 0; i < bestOfLastGenChromoArray.length; i++){
+			bestOfLastGenChromoArray[i]  = new Chromo();
+		}
+		bestOfAllLastGenChromo = new Chromo();
 		
 		//  Start program for multiple runs
 		for (R = 1; R <= Parameters.numRuns; R++){
@@ -399,6 +413,9 @@ public class Search {
 				for (int i=0; i<Parameters.popSize; i++){
 					Chromo.copyB2A(member[i], child[i]);
 				}
+				
+				if (G == Parameters.generations - 1)
+					bestOfLastGenChromoArray[R] = bestOfGenChromo;
 
 			} //  Repeat the above loop for each generation
 
@@ -422,6 +439,15 @@ public class Search {
 			gOutWrite1.close();
 			gOutWrite2.close();
 		} //End of a Run
+		
+		
+		//go and get the bestOfAllLastGenChromo
+		//note: bestOfAllLastGenChromo.rawfitness is initialized to -1 upon construction
+		for (int index = 1; index < Parameters.numRuns + 1; index++){
+			problem.doRawFitness(bestOfLastGenChromoArray[index], bestOfLastGenChromoArray);
+			if (bestOfLastGenChromoArray[index].rawFitness > bestOfAllLastGenChromo.rawFitness)
+				bestOfAllLastGenChromo = bestOfLastGenChromoArray[index];
+		}
 		
 		//print out avg pie chart stuff and close output
 		String gOut3 = String.format("reportData\\pie_chart.csv", R);

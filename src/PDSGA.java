@@ -50,7 +50,7 @@ public class PDSGA extends FitnessFunction{
 		StrategyGA strat = new StrategyGA(X.chromo);
 		X.rawFitness = 0;
 		
-		/*
+		
 		double fitnessPart1 = 0.0;
 		for (int i = 0; i < testStrategies.length; i++){
 			IteratedPD ipd = new IteratedPD(strat, testStrategies[i]);
@@ -59,9 +59,10 @@ public class PDSGA extends FitnessFunction{
 			//System.out.println("GA Score for i = " + i + ": " + ipd.player1Score() + ", Player 2:" + ipd.player2Score());
 		}
 		fitnessPart1 /= testStrategies.length;
-		//X.rawFitness = fitnessPart1;
-		*/
+		X.rawFitness = fitnessPart1;
 		
+		
+		/*
 		double fitnessPart2 = 0.0;
 		for (int i = 0; i < allChromo.length; i++){
 			StrategyGA otherStrat = new StrategyGA(allChromo[i].chromo);
@@ -71,7 +72,8 @@ public class PDSGA extends FitnessFunction{
 			//System.out.println("GA Score for i = " + i + ": " + ipd.player1Score() + ", Player 2:" + ipd.player2Score());
 		}
 		fitnessPart2 /= allChromo.length;
-		X.rawFitness = fitnessPart2;
+		//X.rawFitness = fitnessPart2;
+		*/
 		
 		//X.rawFitness = (fitnessPart1 + fitnessPart2)/2;
 		

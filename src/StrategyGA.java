@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class StrategyGA extends Strategy {
 
 	/**
@@ -13,8 +15,13 @@ public class StrategyGA extends Strategy {
 		name = "GA Strategy";
 		moveHistory = new int[6];
 		moveChoice = new int[64];
+		Random rand = new Random();
 		for(int i = 0; i < moveHistory.length; i++){
-			moveHistory[i]= 1;
+			//randomly initalize the beginning moveset to explore more of chromosome
+			if (rand.nextDouble() < .5)
+				moveHistory[i] = 1;
+			else 
+				moveHistory[i] = 0;
 		}
 		for(int i = 0; i < moveChoice.length; i++){
 			if (chromosome.charAt(i) == '1')
@@ -39,21 +46,27 @@ public class StrategyGA extends Strategy {
 		moveChoice = new int[64];
 		for(int i = 0; i < moveHistory.length; i++){
 			moveHistory[i]= 1;
-		}	
-		//string from only testing against predefined strategies and better parameters
-		//NOTE: This one tries to win, even if it's score is a bit lower. 
-		//VS titfortat: win 436 - 430
-		//0010000001010011001100000011000000001011000001100100011010100100
+		}
+		//CHROMOSOMES FROM LASTGEN:
+		//static fitness function (485.6933333333334):
+		//0011001000010000001100000101101000001010000000100101101100101100
 		
-		//string from just going against other GAs
-		//NOTE: this is bad, it can't beat StrategyRandom
-		//0001011101101111100100101000010011100111011011110111111100011101
+		//GA tournament (418.93333333333345):
+		//0110001100001101010000000101101101010000000000000010000000010100
 		
-		//string from hybrid method:
-		//NOTE: this one cooperates to maximize score. Also wrecks StrategyRandom
-		//VS titfortat: tie 500 - 500
-		//0010010001000001000000000000010000001011010011100100001100001101
-		String input = "0010010001000001000000000000010000001011010011100100001100001101";
+		//hybrid (449.0333333333333):
+		//0001000110111101000010000111000001001011000011110001111101001111
+		
+		//CHROMOSOMES FROM BESTOFALLCHROMO
+		//static fitness function (486.34666666666664):
+		//0010000101010101011101011111000100001010000001100100001110100100
+		
+		//GA tournament (418.59333333333336):
+		//1000000001001100000000001000000111111001000001011000101111111110
+		
+		//hybrid (452.19333333333344):
+		//1001000001010001011000011001000000011000000000111001001001001101
+		String input = "0010000101010101011101011111000100001010000001100100001110100100";
 		for(int i = 0; i < moveChoice.length; i++){
 			if (input.charAt(i) == '1')
 				moveChoice[i] = 1;
