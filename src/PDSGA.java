@@ -62,6 +62,8 @@ public class PDSGA extends FitnessFunction{
 		X.rawFitness = fitnessPart1;
 		
 		
+		
+		
 		/*
 		double fitnessPart2 = 0.0;
 		for (int i = 0; i < allChromo.length; i++){
@@ -73,7 +75,9 @@ public class PDSGA extends FitnessFunction{
 		}
 		fitnessPart2 /= allChromo.length;
 		//X.rawFitness = fitnessPart2;
-		*/
+		 */
+		 
+		
 		
 		//X.rawFitness = (fitnessPart1 + fitnessPart2)/2;
 		
